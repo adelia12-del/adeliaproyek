@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Email ke W3C</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f06, #48f);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
+        }
+        h3 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #fff;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px 0;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+        input[type="reset"] {
+            background-color: #dc3545;
+        }
+        input[type="reset"]:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <form action="proses_form.php" method="GET" enctype="text/plain">
+        <h3>Form ini mengirim sebuah e-mail ke W3C</h3>
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" name="nama" placeholder="Nama Anda" size="20" required>
+
+        <label for="mail">Mail</label>
+        <input type="text" id="mail" name="mail" placeholder="Mail Anda" size="20" required>
+
+        <label for="komentar">Komentar</label>
+        <input type="text" id="komentar" name="komentar" placeholder="Komentar Anda" size="40" required>
+
+        <div style="text-align: center;">
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>
